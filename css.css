@@ -1,0 +1,159 @@
+body {
+    background: rgba(0,0,0, .9);
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.header::after{
+    content: " ";
+    height: 100vh;
+    width: 100%;
+    background-image: url(./img/header_bg.jpg);
+    background-size: cover;
+    background-repeat:no-repeat ;
+    display: block;
+    filter: blur(5px);
+    transition: all 1000ms;
+}
+.header:hover::after{
+    filter: blur(0px);
+}
+.header:hover .header-content{
+    filter: blur(0.5px);
+}
+
+.header-content {
+    position: absolute;
+    z-index: 1;
+    top: 5%;
+    left: 50%;
+    margin-top: 105px;
+    margin-left: -145px;
+    text-align: center;
+    width: 300px;
+    height: 350px;
+    transition: all 1s;
+}
+.header-content .logo{
+    border-radius: 100px;
+    height: 200px;
+    width: 200px;
+    transform:rotate() ;
+}
+
+.title{
+font-family: 'Oswald';
+font-size: 35px;
+margin-bottom: 0px;
+}
+.text{
+    font-family: 'Oswald';
+    font-size:18px ;
+    line-height: 1.1;
+    margin: top 0.5rem; ;
+}
+
+.conteiner {
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 4rem 1rem;
+}
+.text-center{
+    text-align: center;
+    margin: auto;
+}
+
+.grid-3{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.grid-2{
+    height: 200px;
+    margin: top 10px; ;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    line-height: 100%;
+}
+
+.fab {
+    font-size:40px ;
+    justify-content: center;
+    text-align: center;
+}
+.fass{
+    font-size: 120px;
+   align-items:center;
+}
+
+.bg-ligth {
+background:white;
+color: black
+}
+.bg-dark{
+   background-color:  rgba(0,0,0, .9);
+}
+.footer{
+    height: 50px;
+
+}
+
+
+/*@media(max-width:560px) {
+    .header-content{
+        top:5%;
+        margin-top: 5px;
+    }
+}
+.header::after{
+    height: 45vh;
+    filter: blur(2px);
+}
+
+.header-content .text {
+    display: none;
+}
+.header-content .logo{
+    border-radius: 100px;
+    height: 100px;
+    width: 100px;
+}
+
+.grid-2, .grid-3 {
+   grid-template-columns: 1fr;
+}
+body {
+    background: red;
+}
+
+*/
+
+
+@media(max-width:630px){
+    .header-content .logo{
+        border-radius: 100px;
+        height: 100px;
+        width: 100px;
+    }
+    
+    .grid-2, .grid-3 {
+       grid-template-columns: 1fr;
+    }
+    .header-content .text {
+        display: none;
+    }
+    .header::after{
+        height: 35vh;
+        filter: blur(2px);
+    }
+    .header-content{
+        top:5%;
+    
+    }
+}
